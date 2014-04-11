@@ -10,4 +10,6 @@
 * puo' scegliere se usare home address o CoA ma l'implementazione non e' nella rfc
 * non puo' usare la home address se comunica con local peer della home network ma e' fuori casa
 * se usa la home address mentre e' away from home per mandare i pacchetti deve usare la route optimization o reverse tunelling
+* deve mandare mobile prefix solicitation
+* deve ricevere ed analizzare mobile prefix advertisement
 
