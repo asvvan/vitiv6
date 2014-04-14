@@ -12,4 +12,8 @@
 * se usa la home address mentre e' away from home per mandare i pacchetti deve usare la route optimization o reverse tunelling
 * deve mandare mobile prefix solicitation
 * deve ricevere ed analizzare mobile prefix advertisement
-
+* gestione dei key e dei nonce per messaggi di gestione
+* gestione della sicurezza e autenticazione
+* mandare e ricevere i pacchetti
+* controllare binding update e binding refresh request
+* fare il parsing di binding update
