@@ -17,8 +17,14 @@
 #define MOBILENODE_H_
 
 #include <omnetpp.h>
+#include <vector>
+#include "BindingCache.h"
 
 class MobileNode : public cSimpleModule {
+private:
+    bool athome;
+    int srctouse;
+    std::vector<BindingCache> BU_list;
 protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
@@ -26,10 +32,31 @@ protected:
 public:
     MobileNode();
     virtual ~MobileNode();
-
-    bool athome;
-    int srctouse;
     void sendpkg();
+    // search a binding cache inside the list and return it
+    BindingCache searchBU_list(int id);
+    // add a new binding cache in the list
+    void addBU_List(BindingCache bc);
+    // remove all the biniding from the list
+    void resetBU_list();
+    // periodical control to clean the list from dead (lifetime) BC
+    void cleanBU_list();
+
+    bool isAthome() const {
+        return athome;
+    }
+
+    void setAthome(bool athome) {
+        this->athome = athome;
+    }
+
+    int getSrctouse() const {
+        return srctouse;
+    }
+
+    void setSrctouse(int srctouse) {
+        this->srctouse = srctouse;
+    }
 };
 
 #endif /* MOBILENODE_H_ */

@@ -67,6 +67,15 @@ void MobileNode::mv_detection() {
     else athome = true;
 }
 
+// search a binding cache inside the list and return it
+BindingCache searchBU_list(int id);
+// add a new binding cache in the list
+void addBU_List(BindingCache bc);
+// remove all the biniding from the list
+void resetBU_list();
+// periodical control to clean the list from dead (lifetime) BC
+void cleanBU_list();
+
 MobileNode::MobileNode() {
     // TODO Auto-generated constructor stub
 

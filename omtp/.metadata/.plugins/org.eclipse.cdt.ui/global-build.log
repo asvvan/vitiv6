@@ -1226,3 +1226,92 @@ make MODE=debug CONFIGNAME=gcc-debug all
 cd src && make
 make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+16:02:22 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+BindingCache.cc
+In file included from BindingCache.cc:16:0:
+./BindingCache.h:29:5: error: ‘string’ does not name a type
+     string ip_cn;
+     ^
+./BindingCache.h:31:5: error: ‘string’ does not name a type
+     string ip_homeaddress;
+     ^
+./BindingCache.h:33:5: error: ‘string’ does not name a type
+     string ip_coa;
+     ^
+./BindingCache.h:92:5: error: ‘string’ does not name a type
+     string getIpCn() const {
+     ^
+./BindingCache.h:96:18: error: ‘string’ has not been declared
+     void setIpCn(string ipCn) {
+                  ^
+./BindingCache.h:100:5: error: ‘string’ does not name a type
+     string getIpCoa() const {
+     ^
+./BindingCache.h:104:19: error: ‘string’ has not been declared
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+     void setIpCoa(string ipCoa) {
+                   ^
+./BindingCache.h:108:5: error: ‘string’ does not name a type
+     string getIpHomeaddress() const {
+     ^
+./BindingCache.h:112:27: error: ‘string’ has not been declared
+     void setIpHomeaddress(string ipHomeaddress) {
+                           ^
+./BindingCache.h: In member function ‘void BindingCache::setIpCn(int)’:
+./BindingCache.h:97:9: error: ‘ip_cn’ was not declared in this scope
+         ip_cn = ipCn;
+         ^
+./BindingCache.h: In member function ‘void BindingCache::setIpCoa(int)’:
+./BindingCache.h:105:9: error: ‘ip_coa’ was not declared in this scope
+         ip_coa = ipCoa;
+         ^
+./BindingCache.h: In member function ‘void BindingCache::setIpHomeaddress(int)’:
+./BindingCache.h:113:9: error: ‘ip_homeaddress’ was not declared in this scope
+         ip_homeaddress = ipHomeaddress;
+         ^
+make[1]: *** [../out/gcc-debug/src/BindingCache.o] Error 1
+make: *** [all] Error 2
+16:02:52 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+BindingCache.cc
+In file included from BindingCache.cc:16:0:
+./BindingCache.h:92:5: error: ‘string’ does not name a type
+     string getIpCn() const {
+     ^
+./BindingCache.h:96:18: error: ‘string’ has not been declared
+     void setIpCn(string ipCn) {
+                  ^
+./BindingCache.h:100:5: error: ‘string’ does not name a type
+     string getIpCoa() const {
+     ^
+./BindingCache.h:104:19: error: ‘string’ has not been declared
+     void setIpCoa(string ipCoa) {
+                   ^
+./BindingCache.h:108:5: error: ‘string’ does not name a type
+     string getIpHomeaddress() const {
+     ^
+./BindingCache.h:112:27: error: ‘string’ has not been declared
+     void setIpHomeaddress(string ipHomeaddress) {
+                           ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: *** [../out/gcc-debug/src/BindingCache.o] Error 1
+make: *** [all] Error 2
+16:03:25 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+BindingCache.cc
+Creating executable: ../out/gcc-debug/src/vitiv6
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+16:06:38 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/vitiv6
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
