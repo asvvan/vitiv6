@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="TemplateBasedWizard">
+		<item value="bundleentry://264.fwk892252883/template/emptylargeproject/" key="project.template"/>
+		<item value="bundleentry://276.fwk892252883/templates/emptymsgfile/" key="msgfile.template"/>
+		<item value="bundleentry://278.fwk892252883/templates/emptynedfile/" key="nedfile.template"/>
+		<item value="bundleentry://272.fwk892252883/templates/inifile/" key="inifile.template"/>
+	</section>
+</section>
