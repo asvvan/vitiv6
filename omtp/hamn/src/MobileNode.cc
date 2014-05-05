@@ -19,32 +19,55 @@
 #define FN 1 // foreign network
 #define NN 2 // no network
 
+#define DATA 0
+#define SOLICITATION 1
+#define ERROR 2
+
 Define_Module(MobileNode);
 
 MobileNode::MobileNode() {
     // TODO Auto-generated constructor stub
     mnaddress = "1.1.1.1";
     haaddress = "1.1.1.4";
+    halifetime = 0;
 }
 
 MobileNode::~MobileNode() {
     // TODO Auto-generated destructor stub
 }
 
-void updateState() {
+void MobileNode::initialize() {
+    state = par("state");
+    mobileSolicitation();
+}
+
+void MobileNode::handleMessage(cMessage *msg) {
+    mobileSolicitation();
+}
+
+void MobileNode::updateState() {
     if ( mnaddress.compare(0,5,haaddress) == 0 ) state = HN;
-    else if ( mnaddress != NULL ) state = FN;
+    else if ( !mnaddress.empty() ) state = FN;
     else state = NN;
 }
 
-BindingUpdate creteNewBU(std::string mn, std::string ha)
+BindingUpdate MobileNode::creteNewBU(std::string mn, std::string ha)
 {
     BindingUpdate *bu = new BindingUpdate();
     bu->setIpCoa(mnaddress);
     bu->setIpHomeaddress(haaddress);
+    return *bu;
 }
 
-bool mobileSolicitation()
+bool MobileNode::mobileSolicitation()
 {
+    hamn_msg *msg = new hamn_msg();
+    msg->source_var = mnaddress;
+    msg->destination_var = haaddress;
+    msg->msg_var = "Puppa!";
+    msg->type_var = SOLICITATION;
+    msg->lifetime_var = halifetime;
 
+    send(msg, "out0");
+    return true;
 }

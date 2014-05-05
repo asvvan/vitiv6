@@ -17,7 +17,7 @@ package hamn;
 
 simple MobileNode {
 	parameters:
-	    bool athome; //true if at home, false otherwise
+	    int state; //0 at home, 1 at foreign, 2 no network
 	    int srctouse; // 0 mn, 1 ha
 	gates:
 	    input in0;
@@ -30,7 +30,7 @@ simple HomeAgent {
         output out0; // 0 comunica con mobile node
 }
 
-network Rete01 {
+network reteOne {
 	submodules:
 	    mn: MobileNode;
 	    ha: HomeAgent;

@@ -11,6 +11,8 @@
 <includePath path="/usr/include/x86_64-linux-gnu"/>
 <includePath path="/usr/include"/>
 <includePath path="/home/asvvan/projects/omnetpp-4.4.1/include"/>
+<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/simulations"/>
+<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/src"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

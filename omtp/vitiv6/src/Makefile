@@ -124,6 +124,7 @@ $O/HomeAgent.o: HomeAgent.cc \
 	HomeAgent.h \
 	hamnhamh1_m.h
 $O/MobileNode.o: MobileNode.cc \
+	BindingCache.h \
 	MobileNode.h \
 	hamnhamh1_m.h
 $O/hamnhamh1_m.o: hamnhamh1_m.cc \

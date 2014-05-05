@@ -1,0 +1,8 @@
+15:46:28 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+
+15:46:28 Build Finished (took 65ms)
+

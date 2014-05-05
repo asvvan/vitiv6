@@ -15,6 +15,10 @@
 
 #include <src/HomeAgent.h>
 
+#define DATA 0
+#define SOLICITATION 1
+#define ERROR 2
+
 Define_Module(HomeAgent);
 
 HomeAgent::HomeAgent() {
@@ -26,3 +30,25 @@ HomeAgent::~HomeAgent() {
     // TODO Auto-generated destructor stub
 }
 
+void HomeAgent::handleMessage(cMessage *msg)
+{
+    hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+
+    switch(hhmsg->type_var) {
+    case DATA:
+        handleData(hhmsg);
+    break;
+    case SOLICITATION:
+        handleSolicitation(hhmsg);
+    break;
+    case ERROR:
+        handleError(hhmsg);
+    break;
+    }
+}
+
+void HomeAgent::handleSolicitation(hamn_msg *msg)
+{
+    msg->lifetime_var += 100;
+    send(msg, "out0");
+}

@@ -1315,3 +1315,1818 @@ make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
 MobileNode.cc
 Creating executable: ../out/gcc-debug/src/vitiv6
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:03:21 **** Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+BindingUpdate.cc
+MobileNode.cc
+MobileNode.cc: In function ‘void updateState()’:
+MobileNode.cc:35:10: error: ‘mnaddress’ was not declared in this scope
+     if ( mnaddress.compare(0,5,haaddress) == 0 ) state = HN;
+          ^
+MobileNode.cc:35:32: error: ‘haaddress’ was not declared in this scope
+     if ( mnaddress.compare(0,5,haaddress) == 0 ) state = HN;
+                                ^
+MobileNode.cc:35:50: error: ‘state’ was not declared in this scope
+     if ( mnaddress.compare(0,5,haaddress) == 0 ) state = HN;
+                                                  ^
+MobileNode.cc:36:35: error: ‘state’ was not declared in this scope
+     else if ( mnaddress != NULL ) state = FN;
+                                   ^
+MobileNode.cc:37:10: error: ‘state’ was not declared in this scope
+     else state = NN;
+          ^
+MobileNode.cc: In function ‘BindingUpdate creteNewBU(std::string, std::string)’:
+MobileNode.cc:43:18: error: ‘mnaddress’ was not declared in this scope
+     bu->setIpCoa(mnaddress);
+                  ^
+MobileNode.cc:44:26: error: ‘haaddress’ was not declared in this scope
+     bu->setIpHomeaddress(haaddress);
+                          ^
+MobileNode.cc:45:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In function ‘bool mobileSolicitation()’:
+MobileNode.cc:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:03:25 **** Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+BindingCache.cc
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/vitiv6
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:04:12 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::updateState()’:
+MobileNode.cc:36:25: error: no match for ‘operator!=’ (operand types are ‘std::string {aka std::basic_string<char>}’ and ‘long int’)
+     else if ( mnaddress != NULL ) state = FN;
+                         ^
+MobileNode.cc:36:25: note: candidates are:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cstlwatch.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:88,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::list<_Tp, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cstlwatch.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:88,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+     operator!=(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_List_iterator<_Tp>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/set:62:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccomponenttype.h:21,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:26,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_multiset.h:763:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multiset.h:763:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::multiset<_Key, _Compare, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/set:61:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccomponenttype.h:21,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:26,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_set.h:778:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_set.h:778:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::set<_Key, _Compare, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:62:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_multimap.h:888:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multimap.h:888:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_map.h:986:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_map.h:986:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_tree.h:927:5: note: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator!=(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator!=(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:927:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_tree.h:316:5: note: template<class _Val> bool std::operator!=(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator!=(const _Rb_tree_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:316:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_vector.h:1428:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_vector.h:1428:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/4.8/bits/basic_ios.h:37,
+                 from /usr/include/c++/4.8/ios:44,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   mismatched types ‘const _CharT*’ and ‘long int’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘long int’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/allocator.h:143:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:143:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::allocator<_CharT>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/allocator.h:138:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:138:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::allocator<_CharT>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note: template<class _T1, class _T2> bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::pair<_T1, _T2>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/iosfwd:40:0,
+                 from /usr/include/c++/4.8/ios:38,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/postypes.h:221:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::fpos<_StateT>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/4.8/bits/allocator.h:46,
+                 from /usr/include/c++/4.8/string:41,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/ext/new_allocator.h:144:5: note: template<class _Tp> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator!=(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/ext/new_allocator.h:144:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:823:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:823:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:817:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:817:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/signal.h:350:0,
+                 from /usr/include/x86_64-linux-gnu/sys/ucontext.h:22,
+                 from /usr/include/ucontext.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccoroutine.h:37,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:32,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+     else if ( mnaddress != NULL ) state = FN;
+                            ^
+MobileNode.cc: In function ‘BindingUpdate creteNewBU(std::string, std::string)’:
+MobileNode.cc:43:18: error: ‘mnaddress’ was not declared in this scope
+     bu->setIpCoa(mnaddress);
+                  ^
+MobileNode.cc:44:26: error: ‘haaddress’ was not declared in this scope
+     bu->setIpHomeaddress(haaddress);
+                          ^
+MobileNode.cc:45:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In function ‘bool mobileSolicitation()’:
+MobileNode.cc:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:04:29 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:36:28: error: empty character constant
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+MobileNode.cc: In member function ‘void MobileNode::updateState()’:
+MobileNode.cc:36:25: error: no match for ‘operator!=’ (operand types are ‘std::string {aka std::basic_string<char>}’ and ‘char’)
+     else if ( mnaddress != '' ) state = FN;
+                         ^
+MobileNode.cc:36:25: note: candidates are:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cstlwatch.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:88,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::list<_Tp, _Alloc>&, const std::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:1638:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::list<_Tp, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cstlwatch.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:88,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Val>&)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+     operator!=(const _List_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_list.h:282:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_List_iterator<_Tp>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/set:62:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccomponenttype.h:21,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:26,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_multiset.h:763:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multiset.h:763:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::multiset<_Key, _Compare, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/set:61:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/ccomponenttype.h:21,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:26,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_set.h:778:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_set.h:778:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::set<_Key, _Compare, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:62:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_multimap.h:888:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_multimap.h:888:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_map.h:986:5: note: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_map.h:986:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_tree.h:927:5: note: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator!=(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator!=(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:927:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/map:60:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_tree.h:316:5: note: template<class _Val> bool std::operator!=(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator!=(const _Rb_tree_iterator<_Val>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_tree.h:316:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_vector.h:1428:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_vector.h:1428:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/4.8/bits/basic_ios.h:37,
+                 from /usr/include/c++/4.8/ios:44,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/4.8/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2556:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   mismatched types ‘const _CharT*’ and ‘char’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2544:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2532:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘char’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/allocator.h:143:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:143:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::allocator<_CharT>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/string:41:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/allocator.h:138:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/4.8/bits/allocator.h:138:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::allocator<_CharT>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:353:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:303:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note: template<class _T1, class _T2> bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::pair<_T1, _T2>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/iosfwd:40:0,
+                 from /usr/include/c++/4.8/ios:38,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/postypes.h:221:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const std::fpos<_StateT>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/4.8/bits/allocator.h:46,
+                 from /usr/include/c++/4.8/string:41,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/ext/new_allocator.h:144:5: note: template<class _Tp> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator!=(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^
+/usr/include/c++/4.8/ext/new_allocator.h:144:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:823:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:823:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/c++/4.8/bits/stl_iterator.h:817:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:817:5: note:   template argument deduction/substitution failed:
+MobileNode.cc:36:28: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+     else if ( mnaddress != '' ) state = FN;
+                            ^
+MobileNode.cc: In function ‘BindingUpdate creteNewBU(std::string, std::string)’:
+MobileNode.cc:43:18: error: ‘mnaddress’ was not declared in this scope
+     bu->setIpCoa(mnaddress);
+                  ^
+MobileNode.cc:44:26: error: ‘haaddress’ was not declared in this scope
+     bu->setIpHomeaddress(haaddress);
+                          ^
+MobileNode.cc:45:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In function ‘bool mobileSolicitation()’:
+MobileNode.cc:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:05:16 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In function ‘BindingUpdate creteNewBU(std::string, std::string)’:
+MobileNode.cc:43:18: error: ‘mnaddress’ was not declared in this scope
+     bu->setIpCoa(mnaddress);
+                  ^
+MobileNode.cc:44:26: error: ‘haaddress’ was not declared in this scope
+     bu->setIpHomeaddress(haaddress);
+                          ^
+MobileNode.cc:45:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In function ‘bool mobileSolicitation()’:
+MobileNode.cc:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:05:30 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:45:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:50:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MSGC: hamn_msg.msg
+hamn_msg_m.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:17:09 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:35:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+     ^
+HomeAgent.cc:35:15: error: ‘hhmsg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+               ^
+HomeAgent.cc:35:23: error: parse error in template argument list
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                       ^
+HomeAgent.cc:35:53: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+HomeAgent.cc:35:53: note: candidates are:
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note: template<class T> const T check_and_cast(const cObject*)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+ const T check_and_cast(const cObject *p)
+         ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+HomeAgent.cc:39:26: error: ‘handleData’ was not declared in this scope
+         handleData(*hhmsg);
+                          ^
+HomeAgent.cc:42:34: error: ‘handleSolicitation’ was not declared in this scope
+         handleSolicitation(*hhmsg);
+                                  ^
+HomeAgent.cc:45:27: error: ‘handleError’ was not declared in this scope
+         handleError(*hhmsg);
+                           ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:17:10 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:17:52 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:35:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+     ^
+HomeAgent.cc:35:15: error: ‘hhmsg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+               ^
+HomeAgent.cc:35:23: error: parse error in template argument list
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                       ^
+HomeAgent.cc:35:53: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+HomeAgent.cc:35:53: note: candidates are:
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note: template<class T> const T check_and_cast(const cObject*)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+ const T check_and_cast(const cObject *p)
+         ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:17:53 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:18:23 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc:17:26: fatal error: src/hamn_msg.h: No such file or directory
+ #include <src/hamn_msg.h>
+                          ^
+compilation terminated.
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:18:24 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:18:37 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc:17:22: fatal error: hamn_msg.h: No such file or directory
+ #include <hamn_msg.h>
+                      ^
+compilation terminated.
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:18:38 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:18:53 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MSGC: hamn_msg.msg
+HomeAgent.cc
+In file included from HomeAgent.cc:17:0:
+../src/hamn_msg_m.h: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+../src/hamn_msg_m.h:40:9: error: ‘int hamn_msg::type_var’ is protected
+     int type_var;
+         ^
+HomeAgent.cc:38:19: error: within this context
+     switch(hhmsg->type_var) {
+                   ^
+HomeAgent.cc:40:26: error: no matching function for call to ‘HomeAgent::handleData(hamn_msg&)’
+         handleData(*hhmsg);
+                          ^
+HomeAgent.cc:40:26: note: candidate is:
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:26:10: note: void HomeAgent::handleData(cMessage*)
+     void handleData(cMessage *msg);
+          ^
+../src/HomeAgent.h:26:10: note:   no known conversion for argument 1 from ‘hamn_msg’ to ‘cMessage*’
+HomeAgent.cc:43:34: error: no matching function for call to ‘HomeAgent::handleSolicitation(hamn_msg&)’
+         handleSolicitation(*hhmsg);
+                                  ^
+HomeAgent.cc:43:34: note: candidate is:
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:27:10: note: void HomeAgent::handleSolicitation(cMessage*)
+     void handleSolicitation(cMessage *msg);
+          ^
+../src/HomeAgent.h:27:10: note:   no known conversion for argument 1 from ‘hamn_msg’ to ‘cMessage*’
+HomeAgent.cc:46:27: error: no matching function for call to ‘HomeAgent::handleError(hamn_msg&)’
+         handleError(*hhmsg);
+                           ^
+HomeAgent.cc:46:27: note: candidate is:
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:28:10: note: void HomeAgent::handleError(cMessage*)
+     void handleError(cMessage *msg);
+          ^
+../src/HomeAgent.h:28:10: note:   no known conversion for argument 1 from ‘hamn_msg’ to ‘cMessage*’
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:18:54 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:20:39 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:35:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+     ^
+HomeAgent.cc:35:15: error: ‘hhmsg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+               ^
+HomeAgent.cc:35:23: error: parse error in template argument list
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                       ^
+HomeAgent.cc:35:53: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+HomeAgent.cc:35:53: note: candidates are:
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note: template<class T> const T check_and_cast(const cObject*)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+ const T check_and_cast(const cObject *p)
+         ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:21:12 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:35:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+     ^
+HomeAgent.cc:35:15: error: ‘hhmsg’ was not declared in this scope
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+               ^
+HomeAgent.cc:35:23: error: parse error in template argument list
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                       ^
+HomeAgent.cc:35:53: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+HomeAgent.cc:35:53: note: candidates are:
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note: template<class T> const T check_and_cast(const cObject*)
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+ const T check_and_cast(const cObject *p)
+         ^
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+HomeAgent.cc:35:53: error: template argument 1 is invalid
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+                                                     ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:25:15 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:36:23: error: ‘check_and_cast’ is not a member of ‘std’
+     hamn_msg *hhmsg = std::check_and_cast<hamn_msg *>(msg);
+                       ^
+HomeAgent.cc:36:23: note: suggested alternative:
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/HomeAgent.h:19,
+                 from HomeAgent.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   ‘check_and_cast’
+ const T check_and_cast(const cObject *p)
+         ^
+HomeAgent.cc:36:52: error: expected primary-expression before ‘*’ token
+     hamn_msg *hhmsg = std::check_and_cast<hamn_msg *>(msg);
+                                                    ^
+HomeAgent.cc:36:53: error: expected primary-expression before ‘>’ token
+     hamn_msg *hhmsg = std::check_and_cast<hamn_msg *>(msg);
+                                                     ^
+In file included from HomeAgent.cc:17:0:
+../src/hamn_msg_m.h:40:9: error: ‘int hamn_msg::type_var’ is protected
+     int type_var;
+         ^
+HomeAgent.cc:38:19: error: within this context
+     switch(hhmsg->type_var) {
+                   ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:25:30 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:17:0:
+../src/hamn_msg_m.h: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+../src/hamn_msg_m.h:40:9: error: ‘int hamn_msg::type_var’ is protected
+     int type_var;
+         ^
+HomeAgent.cc:38:19: error: within this context
+     switch(hhmsg->type_var) {
+                   ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:25:49 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:36:15: warning: unused variable ‘hhmsg’ [-Wunused-variable]
+     hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+               ^
+MobileNode.cc
+MobileNode.cc:56:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:53:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:53:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:53:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:53:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:60:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:26:47 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+MobileNode.cc
+MobileNode.cc:56:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:53:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:53:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:53:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:53:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:60:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:26:53 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:56:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:53:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:53:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:53:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:53:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:60:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:27:54 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:57:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:49:12: error: could not convert ‘bu’ from ‘BindingUpdate*’ to ‘BindingUpdate’
+     return bu;
+            ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:54:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:54:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:54:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:54:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:28:02 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:57:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:49:13: error: could not convert ‘& bu’ from ‘BindingUpdate**’ to ‘BindingUpdate’
+     return &bu;
+             ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:54:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:54:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:54:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:54:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+MobileNode.cc: In member function ‘BindingUpdate MobileNode::creteNewBU(std::string, std::string)’:
+MobileNode.cc:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:28:13 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:57:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:54:5: error: ‘hamn_msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+     ^
+MobileNode.cc:54:15: error: ‘msg’ was not declared in this scope
+     hamn_msg *msg = new hamn_msg();
+               ^
+MobileNode.cc:54:25: error: expected type-specifier before ‘hamn_msg’
+     hamn_msg *msg = new hamn_msg();
+                         ^
+MobileNode.cc:54:25: error: expected ‘;’ before ‘hamn_msg’
+MobileNode.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:29:07 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc:57:20: warning: character constant too long for its type [enabled by default]
+     msg->msg_var = 'Puppa!';
+                    ^
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:57:18: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+     msg->msg_var = 'Puppa!';
+                  ^
+In file included from /home/asvvan/projects/omnetpp-4.4.1/include/cexception.h:28:0,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/asvvan/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/home/asvvan/projects/omnetpp-4.4.1/include/opp_string.h:103:17: error:   initializing argument 1 of ‘const char* opp_string::operator=(const char*)’ [-fpermissive]
+     const char *operator=(const char *s)  {delete[] str;str=opp_strdup(s);return str;}
+                 ^
+MobileNode.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:29:08 **** Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:29:20 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+hamn_msg_m.cc
+Creating executable: ../out/gcc-debug/src/hamn
+../out/gcc-debug/src/HomeAgent.o: In function `HomeAgent::handleMessage(cMessage*)':
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:40: undefined reference to `HomeAgent::handleData(cMessage*)'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:43: undefined reference to `HomeAgent::handleSolicitation(cMessage*)'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:46: undefined reference to `HomeAgent::handleError(cMessage*)'
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/hamn] Error 1
+make: *** [all] Error 2
+15:29:22 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:29:31 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/hamn
+../out/gcc-debug/src/HomeAgent.o: In function `HomeAgent::handleMessage(cMessage*)':
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:40: undefined reference to `HomeAgent::handleData(cMessage*)'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:43: undefined reference to `HomeAgent::handleSolicitation(cMessage*)'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:46: undefined reference to `HomeAgent::handleError(cMessage*)'
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/hamn] Error 1
+make: *** [all] Error 2
+15:29:32 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:29:37 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:61:12: error: ‘tru’ was not declared in this scope
+     return tru;
+            ^
+MobileNode.cc:62:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:29:38 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:29:43 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘bool MobileNode::mobileSolicitation()’:
+MobileNode.cc:61:12: error: ‘tru’ was not declared in this scope
+     return tru;
+            ^
+MobileNode.cc:62:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+15:29:44 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:29:46 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/hamn
+../out/gcc-debug/src/HomeAgent.o: In function `HomeAgent::handleMessage(cMessage*)':
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:40: undefined reference to `HomeAgent::handleData(cMessage*)'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:43: undefined reference to `HomeAgent::handleSolicitation(cMessage*)'
+/home/asvvan/projects/vitiv6/omtp/hamn/src/HomeAgent.cc:46: undefined reference to `HomeAgent::handleError(cMessage*)'
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/hamn] Error 1
+make: *** [all] Error 2
+15:29:47 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:30:09 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:30:10 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:34:07 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MSGC: hamn_msg.msg
+HomeAgent.cc
+In file included from ../src/HomeAgent.h:23:0,
+                 from HomeAgent.cc:16:
+../src/hamn_msg_m.h: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+../src/hamn_msg_m.h:42:9: error: ‘int hamn_msg::type_var’ is protected
+     int type_var;
+         ^
+HomeAgent.cc:38:19: error: within this context
+     switch(hhmsg->type_var) {
+                   ^
+HomeAgent.cc: At global scope:
+HomeAgent.cc:51:6: error: prototype for ‘void HomeAgent::handleSolicitation(cMessage*)’ does not match any in class ‘HomeAgent’
+ void HomeAgent::handleSolicitation(cMessage *msg)
+      ^
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:31:10: error: candidate is: void HomeAgent::handleSolicitation(hamn_msg*)
+     void handleSolicitation(hamn_msg *msg);
+          ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:34:08 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:34:19 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+HomeAgent.cc:51:6: error: prototype for ‘void HomeAgent::handleSolicitation(cMessage*)’ does not match any in class ‘HomeAgent’
+ void HomeAgent::handleSolicitation(cMessage *msg)
+      ^
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:31:10: error: candidate is: void HomeAgent::handleSolicitation(hamn_msg*)
+     void handleSolicitation(hamn_msg *msg);
+          ^
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+15:34:20 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:34:48 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+MobileNode.cc
+hamn_msg_m.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:34:50 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:36:40 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:36:41 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:41:16 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:41:17 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:41:25 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:42:04 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:42:04 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:42:37 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:42:38 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:44:00 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:44:00 **** Incremental Build of configuration gcc-debug for project vitiv6 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/vitiv6/src'
+15:44:12 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:44:54 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:46:21 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+15:46:28 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'

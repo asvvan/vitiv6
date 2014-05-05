@@ -17,11 +17,19 @@
 #define HOMEAGENT_H_
 
 #include <omnetpp.h>
+#include <string>
+#include <vector>
+#include "BindingUpdate.h"
+#include "hamn_msg_m.h"
 
 class HomeAgent : public cSimpleModule {
 public:
     HomeAgent();
     virtual ~HomeAgent();
+    void handleMessage(cMessage *msg);
+    void handleData(cMessage *msg) {}
+    void handleSolicitation(hamn_msg *msg);
+    void handleError(cMessage *msg) {}
 };
 
 #endif /* HOMEAGENT_H_ */
