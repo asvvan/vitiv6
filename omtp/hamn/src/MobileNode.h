@@ -38,6 +38,9 @@ public:
     void updateState();
     BindingUpdate creteNewBU(std::string mn, std::string ha);
     bool mobileSolicitation();
+    void handleData(hamn_msg *msg);
+    void handleSolicitation(hamn_msg *msg);
+    void handleError(hamn_msg *msg);
 };
 
 #endif /* MOBILENODE_H_ */

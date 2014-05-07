@@ -21,7 +21,8 @@
 
 #define DATA 0
 #define SOLICITATION 1
-#define ERROR 2
+#define ERROR_ICMP 2
+#define ERROR_BINDING 3
 
 Define_Module(MobileNode);
 
@@ -38,10 +39,6 @@ MobileNode::~MobileNode() {
 
 void MobileNode::initialize() {
     state = par("state");
-    mobileSolicitation();
-}
-
-void MobileNode::handleMessage(cMessage *msg) {
     mobileSolicitation();
 }
 
@@ -70,4 +67,122 @@ bool MobileNode::mobileSolicitation()
 
     send(msg, "out0");
     return true;
+}
+
+void MobileNode::handleMessage(cMessage *msg)
+{
+    hamn_msg *hhmsg = check_and_cast<hamn_msg *>(msg);
+
+    switch(hhmsg->type_var) {
+    case DATA:
+        handleData(hhmsg);
+    break;
+    case SOLICITATION:
+        handleSolicitation(hhmsg);
+    break;
+    case ERROR_ICMP:
+    case ERROR_BINDING:
+        handleError(hhmsg);
+    break;
+    }
+}
+
+void MobileNode::handleSolicitation(hamn_msg *msg)
+{
+    //The source address of the IP packet carrying the Mobile Prefix Advertisement is the
+    //same as the home agent address to which the mobile node last sent an accepted home registration
+    //Binding Update to register its primary care-of address
+    const char* tocmp = msg->source_var.c_str();
+    if(haaddress.compare(tocmp))
+    {
+        //The packet must have a type 2 route header and should be protected by an IPSec header
+        //as described in Section 5.4 and 6.8
+
+        //Control the ICMP identifier value of the most recently sent Mobile Prefix Solicitation
+        //and that no other Advertisment has been received
+        //Send Mobile Solicitation ??
+
+        halifetime = msg->lifetime_var;
+    }
+    else
+    {
+        //Silent discard
+    }
+
+}
+
+void MobileNode::handleData(hamn_msg* msg)
+{
+    std::cout << msg->msg_var << std::endl;
+}
+
+void MobileNode::handleError(hamn_msg* msg)
+{
+    const char* msgsource = msg->source_var.c_str();
+    const char* msgvar = msg->msg_var.c_str();
+
+    switch(msg->type_var)
+    {
+    case ERROR_ICMP: {
+        std::string str = "Code 1";
+        if(str.compare(msgvar))
+        {
+            for(int i = 0; i < BU_list.size(); i++)
+            {
+                BindingUpdate* bu = &BU_list[i];
+                if(mnaddress .compare(bu->getIpCoa()) && bu->getIpCn().compare(msgsource))
+                {
+                    BU_list.erase(BU_list.begin() + i);
+                    break;
+                }
+            }
+        }
+        str = "Code 2";
+        if(str.compare(msgvar))
+        {
+            //Log the error and discard the message
+        }
+        break;
+    }
+    case ERROR_BINDING:
+        BindingUpdate* bu;
+        BindingUpdate* buFound;
+        for(int i = 0; i < BU_list.size(); i++)
+        {
+            bu = &BU_list[i];
+            if(bu->getIpCn().compare(msgsource))
+            {
+                buFound = bu;
+                break;
+            }
+        }
+        if(buFound)
+        {
+            std::string str = "Status 1";
+            if(str.compare(msgvar))
+            {
+                if(haaddress.compare(msgsource))
+                {
+                    //Send a BU to home agent
+                }
+                //else if the mobile node has recent upper layer progress information
+                //i.e communication with CN in progress it MAY ignore the message
+
+                //else if there is no upper layer progress information it MUST remove
+                //the entry and route further communication through the HA
+            }
+            str = "Status 2";
+            if(str.compare(msgvar))
+            {
+                //if mobile is not expecting an acknoledgement or a response from CN
+                //it SHOULD ignore this message
+
+                //else the MN should cease the use of any extensions to this specification
+                //if no extension had been used MN SHOULD cease the attempt to use Route Optimization
+            }
+        }
+        break;
+    default:
+        break;
+    }
 }

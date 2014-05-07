@@ -1,8 +1,17 @@
-15:46:28 **** Incremental Build of configuration gcc-debug for project hamn ****
+11:54:19 **** Incremental Build of configuration gcc-debug for project hamn ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:130:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; i < BU_list.size(); i++)
+                                             ^
+MobileNode.cc:150:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+Creating executable: ../out/gcc-debug/src/hamn
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
 
-15:46:28 Build Finished (took 65ms)
+11:54:21 Build Finished (took 1s.870ms)
 
