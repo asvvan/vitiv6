@@ -1,17 +1,17 @@
-11:54:19 **** Incremental Build of configuration gcc-debug for project hamn ****
+12:21:44 **** Incremental Build of configuration gcc-debug for project hamn ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
-MobileNode.cc
-MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
-MobileNode.cc:130:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-             for(int i = 0; i < BU_list.size(); i++)
-                                             ^
-MobileNode.cc:150:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         for(int i = 0; i < BU_list.size(); i++)
-                                         ^
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
 Creating executable: ../out/gcc-debug/src/hamn
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
 
-11:54:21 Build Finished (took 1s.870ms)
+12:21:45 Build Finished (took 863ms)
 

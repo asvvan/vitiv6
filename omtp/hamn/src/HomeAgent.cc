@@ -17,7 +17,8 @@
 
 #define DATA 0
 #define SOLICITATION 1
-#define ERROR 2
+#define ERROR_ICMP 2
+#define ERROR_BINDING 3
 
 Define_Module(HomeAgent);
 
@@ -41,7 +42,8 @@ void HomeAgent::handleMessage(cMessage *msg)
     case SOLICITATION:
         handleSolicitation(hhmsg);
     break;
-    case ERROR:
+    case ERROR_ICMP:
+    case ERROR_BINDING:
         handleError(hhmsg);
     break;
     }
@@ -50,5 +52,16 @@ void HomeAgent::handleMessage(cMessage *msg)
 void HomeAgent::handleSolicitation(hamn_msg *msg)
 {
     msg->lifetime_var += 100;
+    msg->destination_var = MNADDRESS;
+    msg->source_var = HAADDRESS;
+    send(msg, "out0");
+}
+
+void HomeAgent::handleError(hamn_msg *msg)
+{
+    msg->destination_var = MNADDRESS;
+    msg->source_var = HAADDRESS;
+    msg->type_var = ERROR_ICMP;
+    msg->msg_var = "Code 1";
     send(msg, "out0");
 }

@@ -27547,3 +27547,147 @@ MobileNode.cc:150:41: warning: comparison between signed and unsigned integer ex
                                          ^
 Creating executable: ../out/gcc-debug/src/hamn
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:05:01 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:10:31 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:11:00 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:11:03 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:15:30 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:19:40 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+HomeAgent.cc: In member function ‘void HomeAgent::handleError(cMessage*)’:
+HomeAgent.cc:62:10: error: ‘class cMessage’ has no member named ‘destination_var’
+     msg->destination_var = MNADDRESS;
+          ^
+HomeAgent.cc:63:10: error: ‘class cMessage’ has no member named ‘source_var’
+     msg->source_var = HAADDRESS;
+          ^
+HomeAgent.cc:64:10: error: ‘class cMessage’ has no member named ‘type_var’
+     msg->type_var =
+          ^
+HomeAgent.cc:65:1: error: expected primary-expression before ‘}’ token
+ }
+ ^
+HomeAgent.cc:65:1: error: expected ‘;’ before ‘}’ token
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+12:20:07 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+HomeAgent.cc: In member function ‘void HomeAgent::handleError(cMessage*)’:
+HomeAgent.cc:62:10: error: ‘class cMessage’ has no member named ‘destination_var’
+     msg->destination_var = MNADDRESS;
+          ^
+HomeAgent.cc:63:10: error: ‘class cMessage’ has no member named ‘source_var’
+     msg->source_var = HAADDRESS;
+          ^
+HomeAgent.cc:64:10: error: ‘class cMessage’ has no member named ‘type_var’
+     msg->type_var = ERROR_ICMP;
+          ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make: *** [all] Error 2
+12:20:29 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:20:45 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:130:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; i < BU_list.size(); i++)
+                                             ^
+MobileNode.cc:150:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:20:49 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+12:21:44 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+Creating executable: ../out/gcc-debug/src/hamn
+make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'

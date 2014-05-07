@@ -39,7 +39,7 @@ MobileNode::~MobileNode() {
 
 void MobileNode::initialize() {
     state = par("state");
-    mobileSolicitation();
+    updateState();
 }
 
 void MobileNode::updateState() {
@@ -58,6 +58,8 @@ BindingUpdate MobileNode::creteNewBU(std::string mn, std::string ha)
 
 bool MobileNode::mobileSolicitation()
 {
+    movementdetection();
+
     hamn_msg *msg = new hamn_msg();
     msg->source_var = mnaddress;
     msg->destination_var = haaddress;
@@ -103,6 +105,7 @@ void MobileNode::handleSolicitation(hamn_msg *msg)
         //Send Mobile Solicitation ??
 
         halifetime = msg->lifetime_var;
+        adv_recieved = time();
     }
     else
     {
@@ -163,6 +166,7 @@ void MobileNode::handleError(hamn_msg* msg)
             {
                 if(haaddress.compare(msgsource))
                 {
+                    movementdetection();
                     //Send a BU to home agent
                 }
                 //else if the mobile node has recent upper layer progress information
@@ -174,7 +178,7 @@ void MobileNode::handleError(hamn_msg* msg)
             str = "Status 2";
             if(str.compare(msgvar))
             {
-                //if mobile is not expecting an acknoledgement or a response from CN
+                //if mobile is not expecting an acknowledgment or a response from CN
                 //it SHOULD ignore this message
 
                 //else the MN should cease the use of any extensions to this specification
@@ -185,4 +189,26 @@ void MobileNode::handleError(hamn_msg* msg)
     default:
         break;
     }
+}
+
+void MobileNode::sendpkg()
+{
+    movementdetection();
+}
+
+void MobileNode::movementdetection()
+{
+    // detect movement
+
+    // when the MN detects L3 handover it performs Duplicate Address Detection
+
+
+}
+
+void MobileNode::checkAdvertisment()
+{
+    if (time() - adv_recieved > prefix_adv_timeout) {
+        mobileSolicitation();
+    }
+
 }

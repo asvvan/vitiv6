@@ -16,6 +16,9 @@
 #ifndef HOMEAGENT_H_
 #define HOMEAGENT_H_
 
+extern const char * MNADDRESS;
+extern const char * HAADDRESS;
+
 #include <omnetpp.h>
 #include <string>
 #include <vector>
@@ -29,7 +32,9 @@ public:
     void handleMessage(cMessage *msg);
     void handleData(cMessage *msg) {}
     void handleSolicitation(hamn_msg *msg);
-    void handleError(cMessage *msg) {}
+    void handleError(hamn_msg *msg);
+    const char * MNADDRESS = "1.1.1.1";
+    const char * HAADDRESS = "1.1.1.4";
 };
 
 #endif /* HOMEAGENT_H_ */

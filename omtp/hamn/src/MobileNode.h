@@ -19,6 +19,7 @@
 #include <omnetpp.h>
 #include <string>
 #include <vector>
+#include <ctime>
 #include "BindingUpdate.h"
 #include "hamn_msg_m.h"
 
@@ -29,6 +30,12 @@ class MobileNode : public cSimpleModule {
     std::string haaddress;
     std::vector<BindingUpdate> BU_list;
     int halifetime;
+
+    // Timer between HA Prefix Advertisments recieved
+    int prefix_adv_timeout; // default 3 sec
+    int prefix_adv_retries;
+    // Last time of recieved advertisment
+    int adv_recieved;
 protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
@@ -41,6 +48,9 @@ public:
     void handleData(hamn_msg *msg);
     void handleSolicitation(hamn_msg *msg);
     void handleError(hamn_msg *msg);
+    void sendpkg();
+    void movementdetection();
+    void checkAdvertisment();
 };
 
 #endif /* MOBILENODE_H_ */
