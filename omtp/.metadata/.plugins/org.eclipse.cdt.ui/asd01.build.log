@@ -1,0 +1,8 @@
+16:46:52 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+
+16:46:52 Build Finished (took 67ms)
+

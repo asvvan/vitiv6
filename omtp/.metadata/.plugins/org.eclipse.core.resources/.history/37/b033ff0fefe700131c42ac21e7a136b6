@@ -1,0 +1,16 @@
+/*
+ * MobileNode.cc
+ *
+ *  Created on: May 30, 2014
+ *      Author: sandro
+ */
+
+#include <omnetpp.h>
+#include <string.h>
+#include <stdio.h>
+
+class MobileNode : public cSimpleModule
+{
+private:
+    simtime_t
+}

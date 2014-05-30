@@ -1,0 +1,37 @@
+/*
+ * MobileNode.cc
+ *
+ *  Created on: May 30, 2014
+ *      Author: sandro
+ */
+
+#include <omnetpp.h>
+#include <string.h>
+#include <stdio.h>
+
+class MobileNode : public cSimpleModule
+{
+private:
+    simtime_t MsTimeout; // timeout per mobile solicitation
+    cMessage *MsTimeoutEvent; // holds pointer to the timeout self-message
+    std::string mnaddress; // mobile node actual ipv6 address
+    std::string haaddress; // home address
+
+public:
+    MobileNode();
+    ~MobileNode();
+
+protected:
+    virtual void initialize();
+    virtual void handleMessage(cMessage *msg);
+}
+
+MobileNode::MobileNode()
+{
+    MsTimeoutEvent = NULL;
+}
+
+MobileNode::~MobileNode()
+{
+    cancelAndDelete(MsTimeoutEvent);
+}

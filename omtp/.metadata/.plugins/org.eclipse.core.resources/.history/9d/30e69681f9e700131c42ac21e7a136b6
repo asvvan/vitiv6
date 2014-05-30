@@ -1,0 +1,24 @@
+/*
+ * HomeAgent.cc
+ *
+ *  Created on: May 30, 2014
+ *      Author: sandro
+ */
+
+#include <omnetpp.h>
+#include <string.h>
+#include <stdio.h>
+
+class HomeAgent : public cSimpleModule {
+public:
+    HomeAgent();
+    virtual ~HomeAgent();
+    void handleMessage(cMessage *msg);
+    void handleData(cMessage *msg) {}
+    void handleSolicitation(hamn_msg *msg);
+    void handleError(hamn_msg *msg);
+    const char * MNADDRESS = "1.1.1.1";
+    const char * HAADDRESS = "1.1.1.4";
+};
+
+

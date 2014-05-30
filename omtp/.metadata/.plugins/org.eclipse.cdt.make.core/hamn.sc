@@ -10,9 +10,12 @@
 <includePath path="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 <includePath path="/usr/include/x86_64-linux-gnu"/>
 <includePath path="/usr/include"/>
-<includePath path="/home/asvvan/projects/omnetpp-4.4.1/include"/>
-<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/simulations"/>
-<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/src"/>
+<includePath path="/home/asvvan/projects/omnetpp-4.4.1/include" removed="true"/>
+<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/simulations" removed="true"/>
+<includePath path="/home/asvvan/projects/vitiv6/omtp/hamn/src" removed="true"/>
+<includePath path="/home/sandro/projects/omnetpp-4.4.1/include"/>
+<includePath path="/home/sandro/projects/vitiv6/omtp/hamn/simulations"/>
+<includePath path="/home/sandro/projects/vitiv6/omtp/hamn/src"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

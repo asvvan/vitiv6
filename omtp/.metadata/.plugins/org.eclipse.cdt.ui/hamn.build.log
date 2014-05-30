@@ -1,17 +1,60 @@
-12:21:44 **** Incremental Build of configuration gcc-debug for project hamn ****
+15:21:01 **** Incremental Build of configuration gcc-debug for project hamn ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
-make[1]: Entering directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
-HomeAgent.cc
-In file included from HomeAgent.cc:16:0:
-../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
-     const char * MNADDRESS = "1.1.1.1";
-                              ^
-../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
-     const char * HAADDRESS = "1.1.1.4";
-                              ^
-Creating executable: ../out/gcc-debug/src/hamn
-make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleSolicitation(hamn_msg*)’:
+MobileNode.cc:108:29: error: too few arguments to function ‘time_t time(time_t*)’
+         adv_recieved = time();
+                             ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:133:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; i < BU_list.size(); i++)
+                                             ^
+MobileNode.cc:153:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+MobileNode.cc: In member function ‘void MobileNode::checkAdvertisment()’:
+MobileNode.cc:210:14: error: too few arguments to function ‘time_t time(time_t*)’
+     if (time() - adv_recieved > prefix_adv_timeout) {
+              ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+/usr/include/time.h:192:15: note: declared here
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+Makefile:2: recipe for target 'all' failed
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
 
-12:21:45 Build Finished (took 863ms)
+15:21:02 Build Finished (took 668ms)
 

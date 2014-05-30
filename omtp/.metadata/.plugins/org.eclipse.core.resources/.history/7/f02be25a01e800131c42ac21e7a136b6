@@ -1,0 +1,34 @@
+/*
+ * HomeAgent.cc
+ *
+ *  Created on: May 30, 2014
+ *      Author: sandro
+ */
+
+#include <omnetpp.h>
+#include <string.h>
+#include <stdio.h>
+
+class HomeAgent : public cSimpleModule {
+public:
+    HomeAgent();
+    virtual ~HomeAgent();
+    void handleMessage(cMessage *msg);
+ };
+
+Define_Module(HomeAgent);
+
+HomeAgent::HomeAgent()
+{
+
+}
+
+HomeAgent::~HomeAgent()
+{
+
+}
+
+void HomeAgent::handleMessage(cMessage *msg)
+{
+    //send(msg,"out");
+}

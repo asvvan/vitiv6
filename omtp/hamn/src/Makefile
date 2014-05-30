@@ -28,7 +28,7 @@ PROJECTRELATIVE_PATH = src
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/HomeAgent.o $O/BindingUpdate.o $O/MobileNode.o $O/hamn_msg_m.o
+OBJS = $O/HomeAgent.o $O/MobileNode.o $O/BindingUpdate.o $O/hamn_msg_m.o
 
 # Message files
 MSGFILES = \

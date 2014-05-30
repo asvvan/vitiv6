@@ -27691,3 +27691,560 @@ In file included from HomeAgent.cc:16:0:
                               ^
 Creating executable: ../out/gcc-debug/src/hamn
 make[1]: Leaving directory `/home/asvvan/projects/vitiv6/omtp/hamn/src'
+14:54:49 **** Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+HomeAgent.cc:31:39: error: ISO C++ forbids declaration of ‘handleMessage’ with no type [-fpermissive]
+ HomeAgent::handleMessage(cMessage *msg)
+                                       ^
+HomeAgent.cc:31:1: error: prototype for ‘int HomeAgent::handleMessage(cMessage*)’ does not match any in class ‘HomeAgent’
+ HomeAgent::handleMessage(cMessage *msg)
+ ^
+HomeAgent.cc:16:10: error: candidate is: virtual void HomeAgent::handleMessage(cMessage*)
+     void handleMessage(cMessage *msg);
+          ^
+Makefile:93: recipe for target '../out/gcc-debug/src/HomeAgent.o' failed
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+14:54:51 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+HomeAgent.cc
+In file included from HomeAgent.cc:16:0:
+../src/HomeAgent.h:36:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * MNADDRESS = "1.1.1.1";
+                              ^
+../src/HomeAgent.h:37:30: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     const char * HAADDRESS = "1.1.1.4";
+                              ^
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleSolicitation(hamn_msg*)’:
+MobileNode.cc:108:29: error: too few arguments to function ‘time_t time(time_t*)’
+         adv_recieved = time();
+                             ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:133:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; i < BU_list.size(); i++)
+                                             ^
+MobileNode.cc:153:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+MobileNode.cc: In member function ‘void MobileNode::checkAdvertisment()’:
+MobileNode.cc:210:14: error: too few arguments to function ‘time_t time(time_t*)’
+     if (time() - adv_recieved > prefix_adv_timeout) {
+              ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+Makefile:2: recipe for target 'all' failed
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+14:55:23 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MobileNode.cc
+MobileNode.cc: In member function ‘virtual void MobileNode::handleMessage(cMessage*)’:
+MobileNode.cc:82:19: warning: comparison with string literal results in unspecified behaviour [-Waddress]
+     else if (msg=="mobile solicitation")
+                   ^
+MobileNode.cc:82:19: error: comparison between distinct pointer types ‘cMessage*’ and ‘const char*’ lacks a cast [-fpermissive]
+Makefile:93: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+14:56:21 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘virtual void MobileNode::handleMessage(cMessage*)’:
+MobileNode.cc:82:35: warning: comparison with string literal results in unspecified behaviour [-Waddress]
+     else if (msg->getClassName()=="mobile solicitation")
+                                   ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+14:58:33 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+14:58:40 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+14:59:51 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+14:59:57 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:04:02 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MSGC: hamn.msg
+hamn_m.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:12:25 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘virtual void MobileNode::handleMessage(cMessage*)’:
+MobileNode.cc:87:14: error: expected primary-expression before ‘)’ token
+     else if ()
+              ^
+MobileNode.cc:75:11: warning: unused variable ‘hmsg’ [-Wunused-variable]
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+           ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make: *** [all] Error 2
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+15:12:26 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleSolicitation(hamn_msg*)’:
+MobileNode.cc:108:29: error: too few arguments to function ‘time_t time(time_t*)’
+         adv_recieved = time();
+                             ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:133:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+             for(int i = 0; i < BU_list.size(); i++)
+Makefile:2: recipe for target 'all' failed
+                                             ^
+MobileNode.cc:153:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+MobileNode.cc: In member function ‘void MobileNode::checkAdvertisment()’:
+MobileNode.cc:210:14: error: too few arguments to function ‘time_t time(time_t*)’
+     if (time() - adv_recieved > prefix_adv_timeout) {
+              ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:21:00 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+hamn_m.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:21:01 **** Incremental Build of configuration gcc-debug for project hamn ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+MobileNode.cc
+MobileNode.cc: In member function ‘void MobileNode::handleSolicitation(hamn_msg*)’:
+MobileNode.cc:108:29: error: too few arguments to function ‘time_t time(time_t*)’
+         adv_recieved = time();
+                             ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+MobileNode.cc: In member function ‘void MobileNode::handleError(hamn_msg*)’:
+MobileNode.cc:133:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(int i = 0; i < BU_list.size(); i++)
+                                             ^
+MobileNode.cc:153:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < BU_list.size(); i++)
+                                         ^
+MobileNode.cc: In member function ‘void MobileNode::checkAdvertisment()’:
+MobileNode.cc:210:14: error: too few arguments to function ‘time_t time(time_t*)’
+     if (time() - adv_recieved > prefix_adv_timeout) {
+              ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:148,
+                 from /usr/include/c++/4.8/ext/atomicity.h:35,
+                 from /usr/include/c++/4.8/bits/ios_base.h:39,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from ../src/MobileNode.h:19,
+                 from MobileNode.cc:16:
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+/usr/include/time.h:192:15: note: declared here
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
+Makefile:2: recipe for target 'all' failed
+ extern time_t time (time_t *__timer) __THROW;
+               ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+15:21:18 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:22:37 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:22:42 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:23:37 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:23:40 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:24:09 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:24:12 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:24:44 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:24:47 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:47:36 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:47:40 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:48:13 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:48:15 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:52:28 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MSGC: hamn.msg
+MobileNode.cc
+hamn_m.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:52:55 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:53:50 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:53:54 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:55:18 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:55:32 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:57:01 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:57:07 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:57:24 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:59:47 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:59:52 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:01:15 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+HomeAgent.cc: In member function ‘virtual void HomeAgent::handleMessage(cMessage*)’:
+HomeAgent.cc:33:5: error: ‘Hamn’ was not declared in this scope
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+     ^
+HomeAgent.cc:33:11: error: ‘hmsg’ was not declared in this scope
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+           ^
+HomeAgent.cc:33:18: error: parse error in template argument list
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+                  ^
+HomeAgent.cc:33:44: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+                                            ^
+HomeAgent.cc:33:44: note: candidates are:
+In file included from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from HomeAgent.cc:8:
+/home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+HomeAgent.cc:33:44: error: template argument 1 is invalid
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+                                            ^
+In file included from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23:0,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from HomeAgent.cc:8:
+/home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note: template<class T> const T check_and_cast(const cObject*)
+Makefile:94: recipe for target '../out/gcc-debug/src/HomeAgent.o' failed
+ const T check_and_cast(const cObject *p)
+         ^
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+/home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+HomeAgent.cc:33:44: error: template argument 1 is invalid
+Makefile:2: recipe for target 'all' failed
+     Hamn *hmsg = check_and_cast<Hamn *>(msg);
+                                            ^
+make[1]: *** [../out/gcc-debug/src/HomeAgent.o] Error 1
+make: *** [all] Error 2
+16:01:31 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:01:35 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:02:48 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:02:51 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:10:35 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:41:07 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:41:25 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:41:30 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:42:47 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:42:53 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:45:34 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:45:38 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:46:48 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:46:52 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
