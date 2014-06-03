@@ -23,6 +23,8 @@ private:
     cMessage *MsTimeoutEvent; // holds pointer to the MS timeout self-message
     simtime_t MdTimeout; // timeout per movement detection
     cMessage *MdTimeoutEvent; // holds pointer to the MD timeout self-message
+    simtime_t RdTimeout; // timeout per router discovery
+    cMessage *RdTimeoutEvent; // holds the pointer to the RD timeout self-message
     std::string mnaddress; // mobile node actual ipv6 address
     std::string mnrouter; // mobile node default router
     std::string haaddress; // home address
@@ -37,6 +39,12 @@ public:
     void homeLinkDetection();
     void movementDetection();
     void sendMessage();
+    void icmpErrorCode1(Hamn *hmsg);
+    void icmpErrorCode2(Hamn *hmsg);
+    void bindingErrorStatus1(Hamn *hmsg);
+    void bindingErrorStatus2(Hamn *hmsg);
+    void formingNewCoA();
+    void routerDiscovery();
 
 protected:
     virtual void initialize();
@@ -50,6 +58,7 @@ MobileNode::MobileNode()
     CtrlTimeoutEvent = NULL;
     MsTimeoutEvent = NULL;
     MdTimeoutEvent = NULL;
+    RdTimeoutEvent = NULL;
 }
 
 MobileNode::~MobileNode()
@@ -57,6 +66,7 @@ MobileNode::~MobileNode()
     cancelAndDelete(CtrlTimeoutEvent);
     cancelAndDelete(MsTimeoutEvent);
     cancelAndDelete(MdTimeoutEvent);
+    cancelAndDelete(RdTimeoutEvent);
 }
 
 void MobileNode::initialize()
@@ -83,29 +93,41 @@ void MobileNode::handleMessage(cMessage *msg)
 {
     if(msg->isSelfMessage())
     {
-        if (msg==CtrlTimeoutEvent)
-        {
-            EV << "Arrivato il messaggio di controllo!\n";
-            if(simTime() >= halifetime) {
+        if (state != NN) {
+            if (msg==CtrlTimeoutEvent)
+            {
+                //EV << "Arrivato il messaggio di controllo!\n";
+                if(simTime() >= halifetime) {
+                    sendSolicitation();
+                }
+                if(uniform(0,1) < 0.2) {
+                    EV << "Voglio mandare un messaggio!";
+                    bubble("Voglio mandare un messaggio!");
+                    movementDetection();
+                }
+                // manda il messaggio di controllo fra CtrlTimeout
+                scheduleAt(simTime()+CtrlTimeout, CtrlTimeoutEvent);
+            }
+            else if (msg==MsTimeoutEvent)
+            {
+                EV << "Solicitaton non arrivato, rimando la solicitation!\n";
                 sendSolicitation();
             }
-            if(uniform(0,1) < 0.2) {
-                EV << "Voglio mandare un messaggio!";
-                bubble("Voglio mandare un messaggio!");
-                movementDetection();
+            else if (msg==MdTimeoutEvent)
+            {
+                EV << "Movement detection non arrivato, discovering new default router!\n";
+                routerDiscovery();
             }
-            // manda il messaggio di controllo fra CtrlTimeout
-            scheduleAt(simTime()+CtrlTimeout, CtrlTimeoutEvent);
+            else if (msg==RdTimeoutEvent)
+            {
+                EV << "Router discovery non arrivato, provo a ricercare la rete";
+                state = NN;
+            }
         }
-        else if (msg==MsTimeoutEvent)
+
+        else // if state == NN
         {
-            EV << "Solicitaton non arrivato, rimando la solicitation!\n";
-            sendSolicitation();
-        }
-        else if (msg==MdTimeoutEvent)
-        {
-            EV << "Movement detection non arrivato, rimando!\n";
-            movementDetection();
+            routerDiscovery();
         }
     }
     else
@@ -123,8 +145,25 @@ void MobileNode::handleMessage(cMessage *msg)
         {
             EV << "Movement detection accepted!\n";
             cancelEvent(MdTimeoutEvent);
+            cancelEvent(RdTimeoutEvent); // se il router e' accessibile
+                                        // non c'e' bisogno di router discovery
             sendMessage();
         }
+        else if(strtocmp.compare("ICMP error code 1") == 0) icmpErrorCode1(hmsg);
+        else if(strtocmp.compare("ICMP error code 2") == 0) icmpErrorCode2(hmsg);
+        else if(strtocmp.compare("Binding error status 1") == 0) bindingErrorStatus1(hmsg);
+        else if(strtocmp.compare("Binding error status 2") == 0) bindingErrorStatus2(hmsg);
+        else if(strtocmp.compare("IPv6 changed") == 0 || strtocmp.compare("Primary CoA deprecated") == 0)
+            {
+                EV << "Ipv6 changed or primary CoA deprecated, forming new CoA!";
+                formingNewCoA();
+            }
+        else if(strtocmp.compare("Router discovery") == 0)
+            {
+                EV << "Router Discovery accepted!";
+                cancelEvent(RdTimeoutEvent);
+                formingNewCoA();
+            }
     }
 }
 
@@ -150,7 +189,12 @@ void MobileNode::sendSolicitation()
 
     EV << "Sending mobile solicitation!\n";
     send(ms,"out");
-    scheduleAt(simTime()+MsTimeout, MsTimeoutEvent);
+    if (MsTimeoutEvent->isScheduled()) {
+        EV << "Mobile solicitation already scheduled!\n";
+    }
+    else {
+        scheduleAt(simTime()+MsTimeout, MsTimeoutEvent);
+    }
 }
 
 void MobileNode::movementDetection()
@@ -162,7 +206,12 @@ void MobileNode::movementDetection()
 
     EV << "Sending movement detection!\n";
     send(md,"out");
-    scheduleAt(simTime()+MdTimeout,MdTimeoutEvent);
+    if (MdTimeoutEvent->isScheduled()) {
+        EV << "Movement detection already scheduled!\n";
+    }
+    else {
+        scheduleAt(simTime()+MdTimeout,MdTimeoutEvent);
+    }
 }
 
 void MobileNode::sendMessage()
@@ -170,4 +219,53 @@ void MobileNode::sendMessage()
     Hamn *msg = new Hamn();
     msg->setMsg("Puppa!");
     send(msg,"out");
+}
+
+void MobileNode::icmpErrorCode1(Hamn *hmsg)
+{
+    // If the mobile node receives such an ICMP error message in response to
+    // a return routability rocedure or Binding Update, it SHOULD record in
+    // its Binding Update List that future Binding Updates SHOULD NOT be
+    // sent to this destination. Such Binding Update List entries SHOULD be
+    // removed after a period of time in order to allow for retrying route
+    // optimization
+}
+
+void MobileNode::icmpErrorCode2(Hamn *hmsg)
+{
+    // If a mobile node receives an ICMP Parameter Problem, Code 2, message
+    // from some node indicating that it does not support the Home Address option
+    // the mobile node SHOULD log the error and then discard the ICMP message
+}
+
+void MobileNode::bindingErrorStatus1(Hamn *hmsg)
+{
+    // section 11.3.6
+}
+
+void MobileNode::bindingErrorStatus2(Hamn *hmsg)
+{
+    // section 11.3.6
+}
+
+void MobileNode::formingNewCoA()
+{
+    // section 11.5.3
+}
+
+void MobileNode::routerDiscovery()
+{
+    RdTimeout = 5;
+    RdTimeoutEvent = new cMessage("self message router discovery");
+    Hamn *msg = new Hamn();
+    msg->setMsg("Router discovery");
+    send(msg,"out");
+    if (RdTimeoutEvent->isScheduled()) {
+        EV << "Router discovery already scheduled!";
+    }
+    else {
+        scheduleAt(simTime() + RdTimeout,RdTimeoutEvent);
+    }
+    // section Movement Detection 11.5.1
+
 }

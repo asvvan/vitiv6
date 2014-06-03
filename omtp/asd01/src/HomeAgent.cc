@@ -36,17 +36,33 @@ void HomeAgent::handleMessage(cMessage *msg)
     std::string strtocmp(tocmp);
     if (strtocmp.compare("mobile solicitation") == 0)
     {
-        hmsg->setLifetime(7);
+        hmsg->setLifetime(70);
         send(hmsg,"out");
     }
     else if(strtocmp.compare("movement detection") == 0)
     {
-        send(hmsg,"out");
+        if(uniform(0,1) > 0.5)
+              {
+                  send(hmsg,"out");
+              }
+        else {
+            EV << "Movement detection not accepted by home agent!\n";
+            delete msg;
+        }
     }
     else if(strtocmp.compare("Puppa!") == 0)
     {
         bubble("Puppa pure te!");
         EV << "Puppa pure te!";
         delete msg;
+    }
+    else if(strtocmp.compare("Router discovery") == 0)
+    {
+        if(uniform(0,1) > 0.5)
+        {
+            send(hmsg,"out");
+        }
+        else
+            delete msg;
     }
 }

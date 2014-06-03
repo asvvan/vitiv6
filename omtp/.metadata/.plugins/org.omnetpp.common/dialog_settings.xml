@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="TemplateBasedWizard">
-		<item value="bundleentry://264.fwk892252883/template/emptylargeproject/" key="project.template"/>
-		<item value="bundleentry://276.fwk215897580/templates/emptymsgfile/" key="msgfile.template"/>
+		<item value="bundleentry://264.fwk1890272056/template/emptylargeproject/" key="project.template"/>
+		<item value="bundleentry://276.fwk1890272056/templates/msgfile/" key="msgfile.template"/>
 		<item value="bundleentry://278.fwk892252883/templates/emptynedfile/" key="nedfile.template"/>
 		<item value="bundleentry://272.fwk215897580/templates/inifile/" key="inifile.template"/>
 	</section>

@@ -1,4 +1,4 @@
-15:21:01 **** Incremental Build of configuration gcc-debug for project hamn ****
+13:08:04 **** Incremental Build of configuration gcc-debug for project hamn ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
@@ -42,19 +42,19 @@ In file included from /usr/include/pthread.h:24:0,
                  from /usr/include/c++/4.8/ios:42,
                  from /usr/include/c++/4.8/ostream:38,
                  from /usr/include/c++/4.8/iostream:39,
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
                  from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:22,
                  from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
                  from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
                  from ../src/MobileNode.h:19,
-                 from MobileNode.cc:16:
-Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
-/usr/include/time.h:192:15: note: declared here
 make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/hamn/src'
-Makefile:2: recipe for target 'all' failed
+                 from MobileNode.cc:16:
+/usr/include/time.h:192:15: note: declared here
  extern time_t time (time_t *__timer) __THROW;
                ^
+Makefile:2: recipe for target 'all' failed
 make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
 make: *** [all] Error 2
 
-15:21:02 Build Finished (took 668ms)
+13:08:05 Build Finished (took 664ms)
 

@@ -1,8 +1,10 @@
-16:46:52 **** Incremental Build of configuration gcc-debug for project asd01 ****
+16:16:42 **** Incremental Build of configuration gcc-debug for project asd01 ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+Creating executable: ../out/gcc-debug/src/asd01
 make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
 
-16:46:52 Build Finished (took 67ms)
+16:16:43 Build Finished (took 914ms)
 

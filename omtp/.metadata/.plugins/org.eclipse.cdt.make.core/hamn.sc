@@ -22,7 +22,9 @@
 <definedSymbol symbol="__GNUC__=4"/>
 <definedSymbol symbol="__GNUC_MINOR__=8"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=2"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=3"/>
 <definedSymbol symbol="__VERSION__=&quot;4.8.2&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;4.8.3&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
