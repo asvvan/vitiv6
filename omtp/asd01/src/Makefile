@@ -28,7 +28,7 @@ PROJECTRELATIVE_PATH = src
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/HomeAgent.o $O/MobileNode.o $O/hamn_m.o
+OBJS = $O/HomeAgent.o $O/MobileNode.o $O/BindingUpdate.o $O/hamn_m.o
 
 # Message files
 MSGFILES = \
@@ -115,9 +115,11 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/BindingUpdate.o: BindingUpdate.cc
 $O/HomeAgent.o: HomeAgent.cc \
 	hamn_m.h
 $O/MobileNode.o: MobileNode.cc \
+	BindingUpdate.cc \
 	hamn_m.h
 $O/hamn_m.o: hamn_m.cc \
 	hamn_m.h

@@ -20,6 +20,8 @@ packet Hamn {
     //int someField;
     string msg;
     int lifetime;
+    string source;
+    string destination;
     //double arrayField1[];
     //double arrayField2[10];
 }

@@ -28622,3 +28622,685 @@ make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
 MobileNode.cc
 Creating executable: ../out/gcc-debug/src/asd01
 make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:07:04 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc:13:27: fatal error: BindingUpdate.h: No such file or directory
+ #include "BindingUpdate.h"
+                           ^
+compilation terminated.
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 2
+15:07:32 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc:36:17: error: ‘Bind’ was not declared in this scope
+     std::vector<Bind>
+                 ^
+MobileNode.cc:36:21: error: template argument 1 is invalid
+     std::vector<Bind>
+                     ^
+MobileNode.cc:36:21: error: template argument 2 is invalid
+MobileNode.cc:38:1: error: expected unqualified-id before ‘public’
+ public:
+ ^
+MobileNode.cc:59:24: error: definition of implicitly-declared ‘MobileNode::MobileNode()’
+ MobileNode::MobileNode()
+                        ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+15:08:01 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+Makefile:85: recipe for target '../out/gcc-debug/src/asd01' failed
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: multiple definition of `BindingUpdate::BindingUpdate()'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: first defined here
+Makefile:2: recipe for target 'all' failed
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: multiple definition of `BindingUpdate::BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:234: first defined here
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/asd01] Error 1
+make: *** [all] Error 2
+15:08:35 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+In file included from MobileNode.cc:13:0:
+BindingUpdate.cc:229:15: error: expected unqualified-id before ‘)’ token
+ BindingUpdate() {
+               ^
+BindingUpdate.cc:234:16: error: declaration of ‘~BindingUpdate’ as non-member
+ ~BindingUpdate() {
+                ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+15:09:01 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+In file included from MobileNode.cc:13:0:
+BindingUpdate.cc:24:1: error: new types may not be defined in a return type
+ class BindingUpdate {
+ ^
+BindingUpdate.cc:24:1: note: (perhaps a semicolon is missing after the definition of ‘BindingUpdate’)
+BindingUpdate.cc:229:30: error: return type specification for constructor invalid
+ BindingUpdate::BindingUpdate() {
+                              ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+15:09:53 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+In file included from MobileNode.cc:13:0:
+BindingUpdate.cc:24:1: error: new types may not be defined in a return type
+ class BindingUpdate {
+ ^
+BindingUpdate.cc:24:1: note: (perhaps a semicolon is missing after the definition of ‘BindingUpdate’)
+BindingUpdate.cc:230:30: error: return type specification for constructor invalid
+ BindingUpdate::BindingUpdate() {
+                              ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 2
+15:10:50 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+Makefile:85: recipe for target '../out/gcc-debug/src/asd01' failed
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:230: multiple definition of `BindingUpdate::BindingUpdate()'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:230: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:230: multiple definition of `BindingUpdate::BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:230: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:235: first defined here
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/asd01] Error 1
+make: *** [all] Error 2
+15:11:44 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:12:16 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+Makefile:85: recipe for target '../out/gcc-debug/src/asd01' failed
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: multiple definition of `BindingUpdate::BindingUpdate()'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: multiple definition of `BindingUpdate::BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:229: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: first defined here
+../out/gcc-debug/src/BindingUpdate.o: In function `BindingUpdate::~BindingUpdate()':
+/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: multiple definition of `BindingUpdate::~BindingUpdate()'
+../out/gcc-debug/src/MobileNode.o:/home/sandro/projects/vitiv6/omtp/asd01/src/BindingUpdate.cc:233: first defined here
+Makefile:2: recipe for target 'all' failed
+collect2: error: ld returned 1 exit status
+make[1]: *** [../out/gcc-debug/src/asd01] Error 1
+make: *** [all] Error 2
+15:12:47 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:20:47 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:73:14: error: type ‘class std::vector<BindingUpdate*>’ argument given to ‘delete’, expected pointer
+     delete[] BU_list;
+              ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make: *** [all] Error 2
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+15:21:22 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:73:12: error: type ‘class std::vector<BindingUpdate*>’ argument given to ‘delete’, expected pointer
+     delete BU_list;
+            ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+15:22:09 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:73:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:29:30 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:73:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:33:48 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:35:16 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:73:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:35:20 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:37:53 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:38:15 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+15:48:30 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:74:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+BindingUpdate.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:01:25 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MSGC: hamn.msg
+HomeAgent.cc
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::formingNewCoA()’:
+MobileNode.cc:275:75: error: conversion from ‘BindingUpdate*’ to non-scalar type ‘BindingUpdate’ requested
+     BindingUpdate newBU = new BindingUpdate(mnaddress, haaddress, LIFETIME);
+                                                                           ^
+MobileNode.cc:276:28: error: no matching function for call to ‘std::vector<BindingUpdate*>::push_back(BindingUpdate&)’
+     BU_list.push_back(newBU);
+                            ^
+MobileNode.cc:276:28: note: candidate is:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/opp_string.h:22,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cexception.h:28,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cnamedobject.h:26,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/cownedobject.h:25,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/sandro/projects/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from MobileNode.cc:8:
+/usr/include/c++/4.8/bits/stl_vector.h:901:7: note: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = BindingUpdate*; _Alloc = std::allocator<BindingUpdate*>; std::vector<_Tp, _Alloc>::value_type = BindingUpdate*]
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+       push_back(const value_type& __x)
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:901:7: note:   no known conversion for argument 1 from ‘BindingUpdate’ to ‘BindingUpdate* const&’
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make: *** [all] Error 2
+16:02:17 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:253:38: error: ‘class Hamn’ has no member named ‘get’
+     std::string strtocompare = hmsg->get
+                                      ^
+MobileNode.cc:254:19: error: ‘i’ was not declared in this scope
+     for (int i=0; i<BU_list.size(); i++) {
+                   ^
+MobileNode.cc:254:40: error: expected ‘;’ before ‘)’ token
+     for (int i=0; i<BU_list.size(); i++) {
+                                        ^
+MobileNode.cc: In member function ‘void MobileNode::formingNewCoA()’:
+MobileNode.cc:279:75: error: conversion from ‘BindingUpdate*’ to non-scalar type ‘BindingUpdate’ requested
+     BindingUpdate newBU = new BindingUpdate(mnaddress, haaddress, LIFETIME);
+                                                                           ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+16:02:27 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:253:38: error: ‘class Hamn’ has no member named ‘get’
+     std::string strtocompare = hmsg->get
+                                      ^
+MobileNode.cc:254:19: error: ‘i’ was not declared in this scope
+     for (int i=0; i<BU_list.size(); i++) {
+                   ^
+MobileNode.cc:254:40: error: expected ‘;’ before ‘)’ token
+     for (int i=0; i<BU_list.size(); i++) {
+                                        ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+16:04:59 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:253:51: error: conversion from ‘const opp_string’ to non-scalar type ‘std::string {aka std::basic_string<char>}’ requested
+     std::string strtocompare = hmsg->getSourceVar();
+                                                   ^
+MobileNode.cc:254:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+16:05:55 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:253:51: error: cannot convert ‘const opp_string’ to ‘const char*’ in initialization
+     const char* strtocompare = hmsg->getSourceVar();
+                                                   ^
+MobileNode.cc:254:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc:255:25: error: request for member ‘compare’ in ‘strtocompare’, which is of non-class type ‘const char*’
+         if(strtocompare.compare(BU_list[i]->getIpHomeaddress()) || strtocompare.compare(BU_list[i]->getIpCn())) {
+                         ^
+MobileNode.cc:255:81: error: request for member ‘compare’ in ‘strtocompare’, which is of non-class type ‘const char*’
+         if(strtocompare.compare(BU_list[i]->getIpHomeaddress()) || strtocompare.compare(BU_list[i]->getIpCn())) {
+                                                                                 ^
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make: *** [all] Error 2
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+16:07:38 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+HomeAgent.cc
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:254:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc:255:25: error: request for member ‘compare’ in ‘strtocompare’, which is of non-class type ‘const char*’
+         if(strtocompare.compare(BU_list[i]->getIpHomeaddress()) || strtocompare.compare(BU_list[i]->getIpCn())) {
+                         ^
+MobileNode.cc:255:81: error: request for member ‘compare’ in ‘strtocompare’, which is of non-class type ‘const char*’
+         if(strtocompare.compare(BU_list[i]->getIpHomeaddress()) || strtocompare.compare(BU_list[i]->getIpCn())) {
+                                                                                 ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 2
+16:08:17 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:255:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+hamn_m.cc
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:09:32 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:76:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:197:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::icmpErrorCode1(Hamn*)’:
+MobileNode.cc:255:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:23:35 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:198:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:293:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:25:49 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:198:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:293:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+16:25:52 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:16:57 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:201:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:297:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:17:12 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:17:41 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:17:46 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:19:54 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:201:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:299:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:19:57 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:22:08 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:201:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::movementDetection()’:
+MobileNode.cc:228:9: error: ‘MdTimeoutEven’ was not declared in this scope
+     if (MdTimeoutEven && MdTimeoutEvent->isScheduled()) {
+         ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:298:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Makefile:94: recipe for target '../out/gcc-debug/src/MobileNode.o' failed
+make[1]: *** [../out/gcc-debug/src/MobileNode.o] Error 1
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
+17:22:14 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:201:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:298:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:22:18 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+17:24:44 **** Incremental Build of configuration gcc-debug for project asd01 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
+MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:205:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:302:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+Creating executable: ../out/gcc-debug/src/asd01
+make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'

@@ -50,10 +50,10 @@ void HomeAgent::handleMessage(cMessage *msg)
             delete msg;
         }
     }
-    else if(strtocmp.compare("Puppa!") == 0)
+    else if(strtocmp.compare("Messaggio dal mobile node al home agent!") == 0)
     {
-        bubble("Puppa pure te!");
-        EV << "Puppa pure te!";
+        bubble("Messaggio dal home agent al mobile node!");
+        EV << "Messaggio ricevuto dal home agent!";
         delete msg;
     }
     else if(strtocmp.compare("Router discovery") == 0)

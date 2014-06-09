@@ -1,10 +1,22 @@
-16:16:42 **** Incremental Build of configuration gcc-debug for project asd01 ****
+17:24:44 **** Incremental Build of configuration gcc-debug for project asd01 ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
 MobileNode.cc
+MobileNode.cc: In destructor ‘virtual MobileNode::~MobileNode()’:
+MobileNode.cc:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘void MobileNode::compareBUandCoA()’:
+MobileNode.cc:205:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
+MobileNode.cc: In member function ‘bool MobileNode::checkBU(Hamn*, int&, std::string&)’:
+MobileNode.cc:302:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0; i<BU_list.size(); i++) {
+                                  ^
 Creating executable: ../out/gcc-debug/src/asd01
 make[1]: Leaving directory '/home/sandro/projects/vitiv6/omtp/asd01/src'
 
-16:16:43 Build Finished (took 914ms)
+17:24:45 Build Finished (took 1s.17ms)
 

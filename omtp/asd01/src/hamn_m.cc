@@ -38,6 +38,8 @@ Hamn::Hamn(const char *name, int kind) : ::cPacket(name,kind)
 {
     this->msg_var = 0;
     this->lifetime_var = 0;
+    this->source_var = 0;
+    this->destination_var = 0;
 }
 
 Hamn::Hamn(const Hamn& other) : ::cPacket(other)
@@ -61,6 +63,8 @@ void Hamn::copy(const Hamn& other)
 {
     this->msg_var = other.msg_var;
     this->lifetime_var = other.lifetime_var;
+    this->source_var = other.source_var;
+    this->destination_var = other.destination_var;
 }
 
 void Hamn::parsimPack(cCommBuffer *b)
@@ -68,6 +72,8 @@ void Hamn::parsimPack(cCommBuffer *b)
     ::cPacket::parsimPack(b);
     doPacking(b,this->msg_var);
     doPacking(b,this->lifetime_var);
+    doPacking(b,this->source_var);
+    doPacking(b,this->destination_var);
 }
 
 void Hamn::parsimUnpack(cCommBuffer *b)
@@ -75,6 +81,8 @@ void Hamn::parsimUnpack(cCommBuffer *b)
     ::cPacket::parsimUnpack(b);
     doUnpacking(b,this->msg_var);
     doUnpacking(b,this->lifetime_var);
+    doUnpacking(b,this->source_var);
+    doUnpacking(b,this->destination_var);
 }
 
 const char * Hamn::getMsg() const
@@ -95,6 +103,26 @@ int Hamn::getLifetime() const
 void Hamn::setLifetime(int lifetime)
 {
     this->lifetime_var = lifetime;
+}
+
+const char * Hamn::getSource() const
+{
+    return source_var.c_str();
+}
+
+void Hamn::setSource(const char * source)
+{
+    this->source_var = source;
+}
+
+const char * Hamn::getDestination() const
+{
+    return destination_var.c_str();
+}
+
+void Hamn::setDestination(const char * destination)
+{
+    this->destination_var = destination;
 }
 
 class HamnDescriptor : public cClassDescriptor
@@ -144,7 +172,7 @@ const char *HamnDescriptor::getProperty(const char *propertyname) const
 int HamnDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 2+basedesc->getFieldCount(object) : 2;
+    return basedesc ? 4+basedesc->getFieldCount(object) : 4;
 }
 
 unsigned int HamnDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -158,8 +186,10 @@ unsigned int HamnDescriptor::getFieldTypeFlags(void *object, int field) const
     static unsigned int fieldTypeFlags[] = {
         FD_ISEDITABLE,
         FD_ISEDITABLE,
+        FD_ISEDITABLE,
+        FD_ISEDITABLE,
     };
-    return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<4) ? fieldTypeFlags[field] : 0;
 }
 
 const char *HamnDescriptor::getFieldName(void *object, int field) const
@@ -173,8 +203,10 @@ const char *HamnDescriptor::getFieldName(void *object, int field) const
     static const char *fieldNames[] = {
         "msg",
         "lifetime",
+        "source",
+        "destination",
     };
-    return (field>=0 && field<2) ? fieldNames[field] : NULL;
+    return (field>=0 && field<4) ? fieldNames[field] : NULL;
 }
 
 int HamnDescriptor::findField(void *object, const char *fieldName) const
@@ -183,6 +215,8 @@ int HamnDescriptor::findField(void *object, const char *fieldName) const
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
     if (fieldName[0]=='m' && strcmp(fieldName, "msg")==0) return base+0;
     if (fieldName[0]=='l' && strcmp(fieldName, "lifetime")==0) return base+1;
+    if (fieldName[0]=='s' && strcmp(fieldName, "source")==0) return base+2;
+    if (fieldName[0]=='d' && strcmp(fieldName, "destination")==0) return base+3;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -197,8 +231,10 @@ const char *HamnDescriptor::getFieldTypeString(void *object, int field) const
     static const char *fieldTypeStrings[] = {
         "string",
         "int",
+        "string",
+        "string",
     };
-    return (field>=0 && field<2) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<4) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *HamnDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -240,6 +276,8 @@ std::string HamnDescriptor::getFieldAsString(void *object, int field, int i) con
     switch (field) {
         case 0: return oppstring2string(pp->getMsg());
         case 1: return long2string(pp->getLifetime());
+        case 2: return oppstring2string(pp->getSource());
+        case 3: return oppstring2string(pp->getDestination());
         default: return "";
     }
 }
@@ -256,6 +294,8 @@ bool HamnDescriptor::setFieldAsString(void *object, int field, int i, const char
     switch (field) {
         case 0: pp->setMsg((value)); return true;
         case 1: pp->setLifetime(string2long(value)); return true;
+        case 2: pp->setSource((value)); return true;
+        case 3: pp->setDestination((value)); return true;
         default: return false;
     }
 }
@@ -271,8 +311,10 @@ const char *HamnDescriptor::getFieldStructName(void *object, int field) const
     static const char *fieldStructNames[] = {
         NULL,
         NULL,
+        NULL,
+        NULL,
     };
-    return (field>=0 && field<2) ? fieldStructNames[field] : NULL;
+    return (field>=0 && field<4) ? fieldStructNames[field] : NULL;
 }
 
 void *HamnDescriptor::getFieldStructPointer(void *object, int field, int i) const
